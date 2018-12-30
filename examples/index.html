@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script src="../dist/http.browser.js"></script>
+
+  <script>
+    const client = http.client(http.adapter);
+
+    client
+      .get("https://httpbin.org/get", {a: 1, message: "hello there!"})
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
+  </script>
+</body>
+</html>

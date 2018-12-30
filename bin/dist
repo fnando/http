@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+
+mkdir -p dist
+rm -rf dist/*
+
+TARGET=web FILENAME=http ENTRY=entries/browser.js LIBRARY_TARGET=commonjs webpack
+LIBRARY=http TARGET=web FILENAME=http.browser ENTRY=entries/browser.js LIBRARY_TARGET=var webpack
+
+TARGET=node FILENAME=http.node ENTRY=entries/node.js LIBRARY_TARGET=commonjs webpack
