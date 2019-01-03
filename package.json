@@ -1,6 +1,6 @@
 {
   "name": "@fnando/http",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simple HTTP client for both Node.js and the browser.",
   "main": "dist/http.node.js",
   "module": "dist/http.js",
