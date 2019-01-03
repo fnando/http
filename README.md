@@ -120,6 +120,12 @@ http
   .delete("https://httpbin.org/delete", {name: "John Doe"}, {headers: {"user-agent": "reporteo - delete"}})
   .then(success("DELETE"))
   .catch(error("DELETE"));
+
+// To abort an in-flight request, you call `.abort()` on
+// the response object.
+const response = http.get("https://httpbin.org/get");
+                     .catch(error => console.log(error, error.aborted));
+response.abort();
 ```
 
 ## Node.js
