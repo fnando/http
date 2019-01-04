@@ -1,6 +1,7 @@
 import http from "http";
 import https from "https";
 import querystring from "querystring";
+import { URL } from "url";
 
 import {
   buildUrl,
