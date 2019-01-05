@@ -31,6 +31,10 @@ module.exports = {
   target: target,
   mode: "production",
 
+  node: {
+    Buffer: false
+  },
+
   output: {
     path: `${__dirname}/dist/`,
     filename: `${filename}.js`,
