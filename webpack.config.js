@@ -5,21 +5,20 @@ const library = process.env.LIBRARY;
 const target = process.env.TARGET;
 const entry = `${__dirname}/${process.env.ENTRY}`;
 const filename = process.env.FILENAME;
+const plugins = [];
 
-const plugins = [
-  new UglifyJSPlugin({sourceMap: true})
-];
+const banner = `
+try {
+  require("source-map-support").install();
+} catch (error) {
+  // noop
+}
+`;
 
 if (target === "node") {
   plugins.push(
     new webpack.BannerPlugin({
-      banner: `
-        try {
-          require("source-map-support").install();
-        } catch (error) {
-          // noop
-        }
-      `,
+      banner,
       raw: true,
       entryOnly: false
     })
@@ -31,9 +30,6 @@ module.exports = {
   devtool: "source-map",
   target: target,
   mode: "production",
-  // node: {
-  //   fs: "empty"
-  // },
 
   output: {
     path: `${__dirname}/dist/`,

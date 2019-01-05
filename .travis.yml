@@ -1,5 +1,7 @@
 language: node_js
 node_js:
+- stable
+- '11'
 - '10'
 script: yarn test
 sudo: false
