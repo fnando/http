@@ -133,7 +133,7 @@ response.abort();
 Install <https://github.com/evanw/node-source-map-support> to enable sourcemaps support in Node.js.
 
 ```console
-$ yarn add -DE node-source-map-support
+$ yarn add -DE source-map-support
 ```
 
 ## API
