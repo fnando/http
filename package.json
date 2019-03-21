@@ -17,8 +17,10 @@
     "rest"
   ],
   "files": [
-    "src/**/*",
     "dist/**/*",
+    "entries/**/*",
+    "src/**/*",
+    "test/**/*",
     "README.md",
     "LICENSE.txt"
   ],
