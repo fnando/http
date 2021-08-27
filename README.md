@@ -1,4 +1,4 @@
-![@fnando/http: Simple HTTP client for both Node.js and the browser.](https://github.com/fnando/http/raw/master/http.png)
+![@fnando/http: Simple HTTP client for both Node.js and the browser.](https://github.com/fnando/http/raw/main/http.png)
 
 <p align="center">
   <a rel="noreferrer noopener" href="https://travis-ci.org/fnando/http"><img src="https://travis-ci.org/fnando/http.svg" alt="Travis-CI" /></a>
